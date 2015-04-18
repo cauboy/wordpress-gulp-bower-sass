@@ -6,6 +6,10 @@
       "name": "Alexander Synaptic",
       "email": "alexander@synapticism.com",
       "homepage": "http://synapticism.com"
+    }, {
+      "name": "Clemens Bachmair",
+      "email": "clemens@mcm-init.com",
+      "homepage": "http://mcm-init.com"
     }
   ],
   "keywords": [
@@ -29,11 +33,6 @@
   ],
   "devDependencies": {
     "meyer-reset": "*",
-    "normalize.css": "^3.0.2",
-    "scut": "~1.1.0",
-    "html5-history-api": "^4.1.15",
-    "spin.js": "^2.0.2",
-    "wp-ajax-page-loader": "^0.0.2",
-    "headroom.js": "~0.7.0"
+    "normalize.css": "^3.0.2"
   }
 }
