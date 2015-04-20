@@ -24,7 +24,7 @@ module.exports = {
     notify: false, // In-line notifications (the blocks of text saying whether you are connected to the BrowserSync server or not)
     open: true, // Set to false if you don't like the browser window opening automatically
     port: 3000, // Port number for the live version of the site; default: 3000
-    proxy: 'localhost:8080', // Using a proxy instead of the built-in server as we have server-side rendering to do via WordPress
+    proxy: 'localhost:8081/', // Using a proxy instead of the built-in server as we have server-side rendering to do via WordPress
     watchOptions: {
       debounceDelay: 2000 // Delay for events called in succession for the same file/event
     }
@@ -53,11 +53,11 @@ module.exports = {
   scripts: {
     // Bundles are defined by a name and an array of chunks to concatenate; warning: it's up to you to manage dependencies!
     bundles: {
-      // core: ['core']
+      core: ['core']
     },
     // Chunks are arrays of globs matching source files that combine to provide specific functionality
     chunks: {
-      core: [src + 'js/navigation.js', src + 'js/core.js']
+      core: [src + 'js/*.js']
     },
     dest: build + 'js/', // Where the scripts end up
     lint: {
@@ -68,7 +68,7 @@ module.exports = {
       rename: { suffix: '.min' },
       uglify: {},
       dest: build + 'js/'
-    }
+    },
     namespace: 'wp-' // Script filenames will be prefaced with this (optional; leave blank if you have no need for it but be sure to change the corresponding value in `src/inc/assets.php`)
   },
 
@@ -81,7 +81,7 @@ module.exports = {
       src: [dist + '**/*.css', '!' + dist + '**/*.min.css'],
       minify: { keepSpecialComments: 1, roundingPrecision: 3 },
       dest: dist,
-    }
+    },
     autoprefixer: {
       browsers: ['> 3%', 'last 2 versions', 'ie 9', 'ios 6', 'android 4']
     },
@@ -119,11 +119,12 @@ module.exports = {
     src: {
       styles:       src + 'scss/**/*.scss',
       scripts:      [src + 'js/**/*.js', bower + '**/*.js'],
-      images:       src + '**/*(*.png|*.jpg|*.jpeg|*.gif)',
+      images:       src + '**/*(*.png|*.jpg|*.jpeg|*.gif|*.ico)',
       theme:        src + '**/*.php',
       livereload:   [build + '**/*']
     },
     // Who watches the watcher? Easily switch between BrowserSync ('browsersync') and Livereload ('livereload')
-    watcher: 'livereload'
+    // watcher: 'livereload'
+    watcher: 'browsersync'
   }
 }

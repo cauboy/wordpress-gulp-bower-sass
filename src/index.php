@@ -31,7 +31,6 @@
           </article>
         <?php } ?>
         </main>
-        <?php voidx_post_navigation(); ?>
       </section>
     </div>
   </div>

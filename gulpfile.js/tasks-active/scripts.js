@@ -1,10 +1,9 @@
 // ==== SCRIPTS ==== //
 
-var gulp        = require('gulp')
-  , plugins     = require('gulp-load-plugins')({ camelize: true })
-  , merge       = require('merge-stream')
-  , config      = require('../../gulpconfig').scripts
-;
+var gulp        = require('gulp');
+var plugins     = require('gulp-load-plugins')({ camelize: true });
+var merge       = require('merge-stream');
+var config      = require('../../gulpconfig').scripts;
 
 // Check core scripts for errors
 gulp.task('scripts-lint', function() {

@@ -1,8 +1,8 @@
-/*!
-Theme Name: Voidx
-Theme URI: https://github.com/synapticism/wordpress-gulp-bower-sass
-Author: Alexander Synaptic
-Author URI: http://synapticism.com
+/*
+Theme Name: mcm.init Wordpress
+Theme URI: http://www.mcm-init.com
+Author: Clemens Bachmair
+Author URI: http://mcm-init.com
 Description:
 Version: 0.0.1
 License: GPLv3
@@ -11,11 +11,3 @@ Tags: light, responsive-layout, right-sidebar, starter-theme, two-column, transl
 Text Domain:
 Domain Path: /languages/
 */
-
-@import "loader";
-@import "general";
-@import "layout";
-@import "menus";
-@import "navigation";
-@import "sidebar";
-@import "plugins";
